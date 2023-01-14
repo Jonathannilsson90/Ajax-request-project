@@ -8,11 +8,11 @@ buttonSearch = document.getElementById('btn-search')
 
 
 
-buttonSearch.addEventListener("click", async function () {
+input.addEventListener("keypress", async function () {
   try {
 
     const response = await fetch(
-      "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + input.value 
+      "https://www.themealdb.com/api/json/v1/1/search.php?s=" + input.value 
     );
   
 
@@ -64,24 +64,3 @@ buttonList.addEventListener("click", async function () {
     console.log(error);
   }
 });
-
-dropDownMenu.addEventListener("click", async function (e){
-  e.preventDefault()
-
-  try {
-      const response = await fetch ('https://www.themealdb.com/api/json/v1/1/list.php?i=list')
-      const ingredientsArray = await response.json()
-      
-      const ingredients = ingredientsArray["meals"]
-      ingredientHTML = "";
-      for(ingredient of ingredients) {
-        ingredientHTML +=
-        `<option id="${ingredient.strIngredient}">${ingredient.strIngredient}</option>`
-      }
-      dropDownMenu.innerHTML = ingredientHTML
-
-    } catch (error){
-      console.log (error)
-    }
-},{once : true})
-
