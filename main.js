@@ -26,6 +26,9 @@ input.addEventListener("keypress", async function () {
       mealsHMTL += `<article>
             <img src="${meal.strMealThumb}" alt"">
             <h1>${meal.strMeal}</h1>
+            <h2>${meal.strCategory}</h2>
+            <p>${meal.strInstructions}</p>
+          
            
             `;
     }
