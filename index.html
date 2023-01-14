@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Whats for dinner?</title>
+  </head>
+  <body>
+    <container id="img-container">
+      <img
+        id="landing-img"
+        src="https://food.unl.edu/newsletters/images/mise-en-plase.jpg"
+        alt="Cooking-table"
+      />
+    </container>
+
+    <h1 id="headline">Search for your favorite culinary meal</h1>
+
+    <container id="search-container">
+      <input id="inputField"placeholder="Search here..."type="text"/>
+      
+        <button id="list-btn">List all meal categories</button>
+      <button id="btn-search">Search</button>
+      
+<!--       COUNTRY SELECTION -->
+      <form id="country-form" action="#">
+        <label for="country">Choose a country</label>
+        <select id="drop-dwn-menu">
+          <option value="">Choose a country</option>
+      </form>
+  </select>
+       </container>
+  
+
+
+    <container id="content"></container>
+
+    <container id="ingredient"></container>
+
+    <script src="main.js"></script>
+  </body>
+</html>

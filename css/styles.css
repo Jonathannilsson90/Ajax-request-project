@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+*,*::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background-color: whitesmoke;
+}
+
+img,picture,svg,video {
+    display: block;
+    max-width: 100%;
+}
+
+
+#headline{
+    font-family: 'Playfair Display', sans-serif ;
+display: flex;
+justify-content: center;
+font-size: 50px;
+}
+
+#img-container {
+display: flex;
+justify-content: center;
+}
+
+#landing-img {
+    width: 100%;
+    height: 300px;
+}
+
+#search-container {
+/*     display: grid; */
+    align-items: center;
+    grid-template-columns: repeat(6,3fr) ;
+    grid-template-rows: repeat(2,1fr) ;
+}
+#inputField {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end:5;
+    height: 40px;
+    font-size: 20px;
+}
+
+
+/* BUTTONS */
+#list-btn,#random-btn {
+    display: grid;
+      background-color: rgba(51, 51, 51, 0.05);
+      border-radius: 8px;
+      border-width: 0;
+      color: #333333;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      list-style: none;
+      margin: 5px;
+      padding: 10px 12px;
+      text-align: center;
+      transition: all 200ms;
+      vertical-align: baseline;
+      white-space: nowrap;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+}
+
+/* BUTTON PLACEMENT WITH GRID */
+#list-btn {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#random-btn{
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+/*GENERAL FOR STYLING, AJAX CREATED ELEMENTS */
+#content p {
+    font-style: italic;
+    font-size: 20px;
+}
+
+#content img {
+    height: 300px;
+}
+
+#content h1 {
+    font-size: 30px;
+}
+
+#country-form {
+    grid-area: 1/5;
+    margin: 5px }
+
