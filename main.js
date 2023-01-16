@@ -1,7 +1,7 @@
 input = document.getElementById("inputField");
 contentDiv = document.getElementById("content");
 buttonList = document.getElementById("list-btn");
-dropDownMenu = document.getElementById("drop-dwn-menu");
+
 
 
 input.addEventListener("keypress", async function () {
@@ -19,10 +19,10 @@ input.addEventListener("keypress", async function () {
             <img src="${meal.strMealThumb}" alt"">
             <h1>${meal.strMeal}</h1>
             <br>
-            <h2>${meal.strCategory}</h2>
+            <h2>Category: ${meal.strCategory}</h2>
             <br>
             <br>
-            <p>${meal.strInstructions}</p>
+            <p><strong>Instructions:</strong> ${meal.strInstructions}</p>
             </article>
             `;
     }
@@ -46,10 +46,10 @@ buttonList.addEventListener("click", async function () {
       mealsHMTL += `<article class="food-content">
             <img src="${meal.strCategoryThumb}" alt"">
             <br>
-            <h1>${meal.strCategory}</h1>
+            <h1>Category: ${meal.strCategory}</h1>
             <br>
             <br>
-            <p>${meal.strCategoryDescription}</p>
+            <p><strong>Description:</strong> ${meal.strCategoryDescription}</p>
             </article>
             `;
     }
