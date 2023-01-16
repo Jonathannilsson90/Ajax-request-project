@@ -1,45 +1,37 @@
 input = document.getElementById("inputField");
 contentDiv = document.getElementById("content");
-buttonRandom = document.getElementById("random-btn");
 buttonList = document.getElementById("list-btn");
-ingredientDiv = document.getElementById("ingredient");
-dropDownMenu = document.getElementById('drop-dwn-menu')
-buttonSearch = document.getElementById('btn-search')
-
+dropDownMenu = document.getElementById("drop-dwn-menu");
 
 
 input.addEventListener("keypress", async function () {
   try {
-
     const response = await fetch(
-      "https://www.themealdb.com/api/json/v1/1/search.php?s=" + input.value 
+      "https://www.themealdb.com/api/json/v1/1/search.php?s=" + input.value
     );
-  
 
     const data = await response.json();
 
     const meals = data["meals"];
     mealsHMTL = "";
     for (let meal of meals) {
-      
-
-      mealsHMTL += `<article>
+      mealsHMTL += `<article class="food-content">
             <img src="${meal.strMealThumb}" alt"">
             <h1>${meal.strMeal}</h1>
+            <br>
             <h2>${meal.strCategory}</h2>
+            <br>
+            <br>
             <p>${meal.strInstructions}</p>
-          
-           
+            </article>
             `;
     }
 
     contentDiv.innerHTML = mealsHMTL;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 });
-
-
 
 buttonList.addEventListener("click", async function () {
   try {
@@ -51,13 +43,13 @@ buttonList.addEventListener("click", async function () {
     const meals = data["categories"];
     mealsHMTL = "";
     for (let meal of meals) {
-      mealsHMTL += `<article>
-            <img class="js-gen-img" src="${meal.strCategoryThumb}" alt"">
+      mealsHMTL += `<article class="food-content">
+            <img src="${meal.strCategoryThumb}" alt"">
             <br>
-            <h1 class="cat">${meal.strCategory}</h1>
+            <h1>${meal.strCategory}</h1>
             <br>
             <br>
-            <p class="instructions">${meal.strCategoryDescription}</p>
+            <p>${meal.strCategoryDescription}</p>
             </article>
             `;
     }
