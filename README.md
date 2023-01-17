@@ -7,7 +7,7 @@ In this solo project I decided to use an API that handles food, more specific di
 This site takes in one ajax-request in order to find dishes that could intrest you in any form of cooking, will it be desserts or sides, whatever your tastebuds decides.
 
 ---
-## All credit goes to for their helpful and educational API.
+## All credit goes to ThemealDB for their helpful and educational API.
 
 Vist their site by clicking the link below:
 
