@@ -1,6 +1,10 @@
+/// Declaring variables from ID's in HTML 
+
 input = document.getElementById("inputField");
 contentDiv = document.getElementById("content");
 buttonList = document.getElementById("list-btn");
+
+/// EventListener to make the search concurrent with each keypress
 
 input.addEventListener("keypress", async function () {
   try {
@@ -30,6 +34,8 @@ input.addEventListener("keypress", async function () {
     contentDiv.innerHTML =  err
   }
 });
+
+/// List of other proteins that is available through the API.
 
 buttonList.addEventListener("click", async function () {
   try {
