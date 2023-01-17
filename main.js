@@ -2,8 +2,6 @@ input = document.getElementById("inputField");
 contentDiv = document.getElementById("content");
 buttonList = document.getElementById("list-btn");
 
-
-
 input.addEventListener("keypress", async function () {
   try {
     const response = await fetch(
@@ -28,8 +26,8 @@ input.addEventListener("keypress", async function () {
     }
 
     contentDiv.innerHTML = mealsHMTL;
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    contentDiv.innerHTML =  err
   }
 });
 
@@ -46,7 +44,7 @@ buttonList.addEventListener("click", async function () {
       mealsHMTL += `<article class="food-content">
             <img src="${meal.strCategoryThumb}" alt"">
             <br>
-            <h1>Category: ${meal.strCategory}</h1>
+            <h2>Category: ${meal.strCategory}</h2>
             <br>
             <br>
             <p><strong>Description:</strong> ${meal.strCategoryDescription}</p>
@@ -56,6 +54,6 @@ buttonList.addEventListener("click", async function () {
 
     contentDiv.innerHTML = mealsHMTL;
   } catch (error) {
-    console.log(error);
+    contentDiv.innerHTML = "Sorry, something went wrong. :(";
   }
 });
